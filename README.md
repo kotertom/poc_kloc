@@ -2,6 +2,13 @@
 
 An idea for a mix between [bloc's](https://bloclibrary.dev/#/) Cubit and flutter's ChangeNotifier, with something extra. Prior knowledge of how these two work is recommended.
 
+
+Feature\Implementation|Cubit|ChangeNotifier|kloc|
+|---|---|---|---|
+|observability|`cubit.stream` (stream)|`changeNotifier.addListener` (callback registration)|`kloc.events` (stream)|
+|notifies when|state changes|whenever they want|whenever they want|
+|notification payload|new state|nothing|whatever they want (e.g. an event that occurred)|
+
 ## Example
 
 This repo contains just a simple demo app with a counter, you can just `flutter run` it in chrome
